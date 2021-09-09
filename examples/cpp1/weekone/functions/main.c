@@ -1,0 +1,12 @@
+#include <stdio.h>
+void foo();
+
+int main(int argc, char **argv) {
+  foo();
+  return 0;
+}
+
+void foo(void) {
+  char *message = "Hello World\0";
+  printf("%s", message);
+}

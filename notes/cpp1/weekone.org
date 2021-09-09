@@ -10,4 +10,46 @@ There are wonderful tutors in this department who have taken this class with me.
 * Homework
 There are no tests in this class because I feel like giving tests is the wrong way to asses weather or not you understand the concepts. The only way to learn to code is to write code. So in this class we will be writing a lot of it. I recommend committing _everything_ to github. A) this is a great practice for your eventual career and B) it can save your ass in case of catastrophic computer accidents.
 * Course setup
-This course starts withe the C Programming language to get our feet wet in a systems language with virtually no creature comforts.
+This course starts withe the C Programming language to get our feet wet in a systems language with virtually no creature comforts. we will write 4 simple assigments in c along with daily brain teasers. Sadly Visual Studio/MSCV has poor support for the c programming language so we will be venturing into the wild that is CentOS with the [[https://gcc.gnu.org][the GCC Compiler]]. Since we dont have any linux machines on campus, we have a special pool on the [[https://horizon.colum.edu/][VDI]] service. These machines are provisioned for us to use with [[https://code.visualstudio.com/][Visual Studio Code]] as the default editor (along with VIM if you are feeling extra spicy). My personal recommendation to avoid some of the weirdness that comes along with working in a remote virtual machine, installing the [[https://docs.microsoft.com/en-us/windows/wsl/install-win10][Windows Subsystem For Linux]] and doing your compiling/directory management in there.
+* C basics
+#+BEGIN_SRC cpp
+//this is the entry point of every c program
+int main(void)
+{
+    //variable assignment works as you think it should (mostly)
+    int x = 10;
+    //there are no strings, just char arrays
+    char* = "Hello World\0";
+    //All of our numeric typed friends are here
+    float f = 1.0;
+    long l = 123421431234;
+    double = 2.0
+}
+#+END_SRC
+* Loops
+#+BEGIN_SRC cpp
+for(int i = 0; i < 10; i++)
+{
+    //do something with i
+}
+
+while(true)
+{
+    //do something forever
+}
+#+END_SRC
+* Conditionals
+#+BEGIN_SRC
+if(true)
+{
+    // if works like you would think
+}
+else if(false)
+{
+
+}
+else
+{
+
+}
+#+END_SRC
