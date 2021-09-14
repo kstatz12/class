@@ -1,0 +1,88 @@
+#+title: Week 2
+#+author: Karl Statz
+#+email: kstatz@colum.edu
+* Week 1 recap
+In week one we talked about the course, goals and where we are headed. We learned how to compile c, basic c syntax and a quick logic test
+* Shell basics
+The shell is a new frontier for a lot of us so lets take a moment to deep dive into some common shell commands
+
+#+BEGIN_SRC sh
+# To print the current directory
+pwd
+
+# changing directories
+cd ${targetdir} # where ${targetdir} is the directory you wan to go to
+
+# creating a new directory
+mkdir ${name} # where ${name} is the name of the new directory
+
+# Creating a file
+touch ${name} # where ${name} is the name of the new file
+
+# reading the contents of a file
+less ${filename}
+
+# alternative
+cat ${filename}
+#+END_SRC
+* Compiler Basics
+
+Compiling code has a bit of a learning curve here are the basics
+
+#+BEGIN_SRC sh
+# gcc is the main program we call to compile c code
+
+gcc -o app main.c # will create a file called app by compiling main.c
+
+gcc -o app -std=c99 main.c # will compile with the c99 standard
+
+#+END_SRC
+
+There is _no_ hot code reloading in c/c++ (without devil magic) so burn these commands into your brain
+* Pointers
+Pointers are an essential concept in c/c++. They are conceptually simple but the devil is in the details.
+
+Essentially a pointer is just the address of whatever it is it _points_ at. (Hence the name)
+
+#+BEGIN_SRC cpp
+//a pointer to the character array holding Hello World
+char *myString = "Hello World";
+
+
+#+END_SRC
+* Pass by reference/value
+#+BEGIN_SRC
+
+void by_value(int n)
+{
+    n++;
+}
+
+void by_reference(int *n_ptr)
+{
+    n++;
+}
+
+int n = 10;
+by_value(n);
+
+printf("%d", n); //will print 10
+
+by_reference(&n);
+
+printf("%d", n); // will print 11;
+#+END_SRC
+* Pointer Pain
+People tend to overcomplicate pointers and there is some confusion on when something _should_ be a pointer.
+
+- Whenever you are passing an array to something, it should be a pointer
+- Whenever you are returning an array or any heap allocated memory it should be a pointer
+- If you need to pass something larger than a primitive, it should be a pointer
+* UB madness
+#+BEGIN_SRC
+char * get_greeting()
+{
+    char* greeting = "hello world";
+    return greeting; //Awooga Awooga, this is a bad thing
+}
+#+END_SRC
