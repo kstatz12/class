@@ -3,24 +3,38 @@
 
 #define length(array) (sizeof(array) / sizeof((array)[0]))
 
-#define OTHER_SIZE 15
-
-#define SIZE 10
-
-struct array {
+struct int_array {
   int *data;
   size_t length;
 };
 
-void print_arry(struct array *s) {
-  for (size_t i = 0; i < s->length; i++) {
-    printf("%d", s->data[i]);
+int validate_array(struct int_array *arry) {
+  // validate array contents
+  for (size_t i = 0; i < arry->length; i++) {
+    if (arry->data[i] < 5) {
+      return 1;
+    }
+  }
+  return 0;
+}
+
+// print_arry/1
+void print_array(struct int_array *arry) {
+  for (size_t i = 0; i < arry->length; i++) {
+    printf("%d", arry->data[i]);
   }
 }
 
-int main(int argc, char **argv) {
-  int my_array[SIZE] = {1, 2, 3, 4};
+int main(void) {
+  int my_ints[3] = {1, 2, 3};
 
-  struct array s = {my_array, length(my_array)};
-  print_arry(&s);
+  struct int_array i;
+  i.data = my_ints;
+  i.length = length(my_ints);
+
+  if (!validate_array(&i)) {
+    return 1;
+  }
+
+  print_array(&i);
 }

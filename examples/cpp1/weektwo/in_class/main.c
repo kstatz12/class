@@ -6,7 +6,7 @@ int *get_pos(int *arry, size_t len, int target) {
   int *pos = (int *)malloc(sizeof(int) * 2);
 
   for (size_t i = 0; i < len; i++) {
-    for (size_t j = 0; j < len; j++) {
+    for (size_t j = 1; j < len; j++) {
       if (arry[i] + arry[j] == target) {
         pos[0] = i;
         pos[1] = j;
