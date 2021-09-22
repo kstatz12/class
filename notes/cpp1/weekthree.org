@@ -1,0 +1,54 @@
+#+title: Week 3
+#+author: Karl Statz
+#+email: kstatz@colum.edu
+* Data Structures
+
+Sometimes it is impossible/unwise to represent data as a loose collection of ints and strings. We need to logically group data around a concept. A user or a login or a transaction for a purchase. All of these are complex data structures that need to be grouped together.
+
+#+BEGIN_SRC cpp
+struct user {
+    char* name;
+    int age;
+    int height;
+    int weight;
+};
+#+END_SRC
+* Using data structures
+Data structures have some caveats to them. Whenever we use a raw data structure we need to prefix it with the keyword struct
+
+#+BEGIN_SRC cpp
+struct user u = {.name = "Steve", .age = 19, .height = 160, .weight = 200};
+#+END_SRC
+
+To get around this we have to define our own type. Defining custom types is really unavoidable in c if you want any sort of sanity to your code.
+* typedef your structs
+
+#+BEGIN_SRC cpp
+typedef struct {
+    char *name;
+} User;
+
+User u = {.name = "hello world"};
+#+END_SRC
+* What if my struct references itself?
+
+Well, if you find yourself in this fairly common situation you have to get a little fancy with your typedef
+
+#+BEGIN_SRC cpp
+typdef struct Node {
+    char *data;
+    Node *next;
+} NodeT;
+#+END_SRC
+* Unions
+Unions are special structs that can only hold one value at a time. This sounds weird but it is fairly simple once you get used to them
+
+#+BEGIN_SRC cpp
+union Ret {
+    int i;
+    float f;
+    char *c;
+}
+#+END_SRC
+If we assign i, then f and c will be unnasigned, if we change to assing f, then i and c will be undefined. This is helpful if you can return mulitple values from a function
+it is a, albiet hacky, way of doing generic programming in c
