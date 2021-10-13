@@ -52,5 +52,3 @@ union Ret {
 #+END_SRC
 If we assign i, then f and c will be unnasigned, if we change to assing f, then i and c will be undefined. This is helpful if you can return mulitple values from a function
 it is a, albiet hacky, way of doing generic programming in c
-
-p

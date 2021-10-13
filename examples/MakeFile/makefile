@@ -12,3 +12,7 @@ app: $(OBJ)
 .PHONY: clean
 clean:
 	rm *.o app
+
+.PHONY: run
+run:
+	./app
