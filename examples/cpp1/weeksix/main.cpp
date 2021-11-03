@@ -38,15 +38,21 @@ int main() {
   std::cin >> input;
   int total = 0;
   for (int i = 0; i < input.length(); i++) {
+    // Check if we are at the end of the array
     if (i != (input.length() - 1)) {
+      // Peak at next value
       int j = i + 1;
       if (less_than(input[i], input[j])) {
+        // subtract next next from current
         total += (get_value(input[j]) - get_value(input[i]));
+        // skip forward so we dont process the same value twice
         i = j;
       } else {
+        // just calculate in place
         total += get_value(input[i]);
       }
     } else {
+      // calculate in place
       total += get_value(input[i]);
     }
   }
