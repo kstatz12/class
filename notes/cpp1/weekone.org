@@ -69,6 +69,19 @@ gcc $FILENAME -o app
   - A note, mac users can use clang/llvm as well
 - GDB version 7.6.1 or higher
 - GNU Make version 3.8.2 or higher
+- MacOS
+  #+BEGIN_SRC shell
+    //Requires XCode
+    brew install gcc g++ gdb make
+  #+END_SRC
+- RHEL
+  ,#+BEGIN_SRC shell
+    sudo yum install gcc g++ gdb make
+  #+END_SRC
+- Debian
+  ,#+BEGIN_SRC shell
+    sudo apt install gcc g++ gdb make
+  #+END_SRC
 **  Windows
  - [cygwin](https://www.cygwin.com/)
    - Make sure you choose gcc, gdb and make when you install
