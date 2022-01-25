@@ -12,7 +12,6 @@ void real_printf(const char *s) {
 void foo(const char *str) { printf("%s", str); }
 
 int main(void) {
-  char *c;
-  printf("%x", c);
+  foo("Hello World");
   // real_printf(c);
 }
