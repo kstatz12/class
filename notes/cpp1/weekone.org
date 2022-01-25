@@ -53,3 +53,8 @@ else
 
 }
 #+END_SRC
+
+* VDI instructions
+- go to horizon.colum.edu
+- login/download client and sign in using colum credentials
+- log into IAM-Linux with cuser:c++linux as the username:password
