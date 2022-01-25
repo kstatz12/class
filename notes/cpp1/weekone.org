@@ -54,6 +54,11 @@ else
 }
 #+END_SRC
 
+* Compiling
+#+BEGIN_SRC shell
+gcc $FILENAME -o app
+#+END_SRC
+
 * VDI instructions
 - go to horizon.colum.edu
 - login/download client and sign in using colum credentials
