@@ -2,7 +2,7 @@
 #+author: Karl Statz
 #+email: kstatz@colum.edu
 * Welcome
-Welcome to C++ I. My name is Karl Statz and this is my 8th semester teaching this class! A little about my background: I am a veteran software engineer with 15 years of experience writing code from web video platforms to backend financial systems. My current role is Software Architect at the construction software company RhinoDox where I design and implement Distributed software for construction bid proposals.
+Welcome to C++ I. My name is Karl Statz and this is my 9th semester teaching this class! A little about my background: I am a veteran software engineer with 15 years of experience writing code from web video platforms to backend financial systems. My current role is Software Architect at the construction software company RhinoDox where I design and implement Distributed software for construction bid proposals.
 
 While I don't have official office hours, I am usually online in Teams and via Email most ours of the day to answer questions.
 * Getting Help
