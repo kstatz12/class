@@ -58,3 +58,12 @@ else
 - go to horizon.colum.edu
 - login/download client and sign in using colum credentials
 - log into IAM-Linux with cuser:c++linux as the username:password
+* Minimum System requirements
+** *Nix Systems (this includes macos)
+- GCC version 4.8.5 or higher
+  - A note, mac users can use clang/llvm as well
+- GDB version 7.6.1 or higher
+- GNU Make version 3.8.2 or higher
+**  Windows
+ - [cygwin](https://www.cygwin.com/)
+   - Make sure you choose gcc, gdb and make when you install
