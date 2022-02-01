@@ -1,6 +1,6 @@
 *.o
-*.md
 *.pdf
 *.html
 *.out
 app
+*.md
