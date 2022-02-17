@@ -1,0 +1,3 @@
+/home/karls/src/class/examples/cpp2/week3/build/CMakeFiles/app.dir
+/home/karls/src/class/examples/cpp2/week3/build/CMakeFiles/edit_cache.dir
+/home/karls/src/class/examples/cpp2/week3/build/CMakeFiles/rebuild_cache.dir
