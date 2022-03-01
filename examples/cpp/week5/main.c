@@ -48,7 +48,40 @@ void print(NodeT **head) {
   printf("%d\n", last->data);
 }
 
+int getnth(NodeT **head, const int idx) {
+  NodeT *last = *head;
+
+  int count = 0;
+
+  while (last->next != NULL) {
+    if (count == idx) {
+      return last->data;
+    }
+    last = last->next;
+    count++;
+  }
+  return -1;
+}
+
 int main() {
-  int *arry = (int *)malloc(sizeof(int) * 10);
-  free(arry);
+  // Constant Time O(1)
+  // Linear Time O(n)
+  // Exponential Time O(n^x)
+  //
+  // A -> B -> C -> D -> C
+  //
+  //
+  NodeT *head = init(1);
+
+  append(&head, 2);
+  append(&head, 3);
+  append(&head, 4)
+}
+
+void foo() {
+  char *s = "hello world";
+  char **s2;
+
+  s2[0] = "Hello World";
+  s2[1] = "Goodbye";
 }
