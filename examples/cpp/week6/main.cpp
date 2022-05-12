@@ -4,8 +4,8 @@
 int main() {
 
   std::string str = "hello world";
-
-  str.length() foo();
+  str.length();
+  foo();
   bar();
   baz();
 }
